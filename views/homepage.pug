@@ -1,0 +1,19 @@
+h1 Custom Object Records
+a(href="/update-cobj") Add to this table
+
+table(border="1" cellpadding="5")
+  thead
+    tr
+      th Name
+      th Species
+      th Description
+  tbody
+    if records.length === 0
+      tr
+        td(colspan="3") No records found
+    else
+      each record in records
+        tr
+          td= record.properties.name || 'N/A'
+          td= record.properties.species || 'N/A'
+          td= record.properties.description || 'N/A'
